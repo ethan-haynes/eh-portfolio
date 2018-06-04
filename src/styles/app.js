@@ -1,7 +1,7 @@
 import { white, gray } from '../shared/styles/colors'
 
 export const app = {
-  height: '90vh',
+  height: '95vh',
   width: 'auto',
   maxWidth: '100%',
   maxHeight: '100%',
@@ -10,5 +10,5 @@ export const app = {
   backgroundColor: gray.dark,
   color: white,
   display: 'flex',
-  flexDirection: 'column'
+  flexDirection: 'column',
 }
