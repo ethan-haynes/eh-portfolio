@@ -1,10 +1,14 @@
 import { white, gray } from '../shared/styles/colors'
 
 export const app = {
-  height: '100vh',
-  width: '100vw',
-  padding: 20,
+  height: '90vh',
+  width: 'auto',
+  maxWidth: '100%',
+  maxHeight: '100%',
+  padding: 30,
   fontFamily: 'Roboto, sans-serif',
-  backgroundColor: gray,
-  color: white
+  backgroundColor: gray.dark,
+  color: white,
+  display: 'flex',
+  flexDirection: 'column'
 }
