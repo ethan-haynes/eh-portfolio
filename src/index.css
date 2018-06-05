@@ -18,6 +18,7 @@ html {
 
 /**
  * Remove the margin in all browsers.
+ * overflow removes dom scroll.
  */
 
 body {
