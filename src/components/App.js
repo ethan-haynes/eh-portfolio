@@ -35,21 +35,21 @@ class App extends Component {
           justifyContent: 'flex-end',
           padding: '0 10px',
         }}>
-          <span style={{ width: 15, margin: 3, backgroundColor: white, height: 2 }}/>
+          <span style={{ width: 25, margin: 3, backgroundColor: white, height: 2 }}/>
         </div>
         <div style={{
           display:'flex',
           justifyContent: 'flex-end',
           padding: '0 10px'
         }}>
-          <span style={{ width: 15, margin: 3, backgroundColor: white, height: 2 }}/>
+          <span style={{ width: 25, margin: 3, backgroundColor: white, height: 2 }}/>
         </div>
         <div style={{
           display:'flex',
           justifyContent: 'flex-end',
           padding: '0 10px'
         }}>
-          <span style={{ width: 15, margin: 3, backgroundColor: white, height: 2 }}/>
+          <span style={{ width: 25, margin: 3, backgroundColor: white, height: 2 }}/>
         </div>
         </div>
         <Footer/>

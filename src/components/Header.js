@@ -17,9 +17,9 @@ class Header extends Component {
           right: 0,
           padding: 10
         }}>
-          <div style={{ width: 15, margin: 3, backgroundColor: white, height: 2 }}/>
-          <div style={{ width: 15, margin: 3, backgroundColor: white, height: 2 }}/>
-          <div style={{ width: 15, margin: 3, backgroundColor: white, height: 2 }}/>
+          <div style={{ width: 25, margin: 3, backgroundColor: white, height: 2 }}/>
+          <div style={{ width: 25, margin: 3, backgroundColor: white, height: 2 }}/>
+          <div style={{ width: 25, margin: 3, backgroundColor: white, height: 2 }}/>
         </span>
       </header>
     )
