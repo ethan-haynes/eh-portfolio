@@ -26,20 +26,40 @@ var styles = {
     transitionTimingFunction: 'ease-out',
   },
   pageTransitionDown: {
-      animationDuration: '1.5s',
+      animationDuration: '1s',
       animationName: transitionDownKeyframes
   },
   pageTransitionUp: {
-      animationDuration: '1.5s',
+      animationDuration: '1s',
       animationName: transitionDownKeyframes
   }
 }
 
 class Footer extends Component {
-  state = { pageDown: false }
-  toggle = () => this.setState({ pageDown: !this.state.pageDown })
+  state = { pageDown: true, transition: false, page: 0, pages: [0,1,2,3] }
+
+  isPageDown = ({ page, pageDown } = this.state) => {
+    switch (page) {
+      case 0:
+        return true
+      case 3:
+        return true
+      default:
+        return pageDown
+    }
+  }
+
+  toggle = () => {
+    const { page, pageDown, transition } = this.state
+    this.setState({ page: pageDown ? (page + 1) : (page - 1), pageDown: this.isPageDown(), transition: true },
+      () => setTimeout(()=>this.setState({ transition: false }), 1000)
+    )
+  }
   render() {
-    var transition = this.state.pageDown ? styles.pageTransitionDown : {}
+    var transition = this.state.transition
+      ? this.state.pageDown ? styles.pageTransitionDown : styles.pageTransitionUp
+      : {} // clear animation
+
     return (
       <footer>
         <span style={{
