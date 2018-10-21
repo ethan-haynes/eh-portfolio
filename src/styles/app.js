@@ -11,4 +11,5 @@ export const app = {
   color: white,
   display: 'flex',
   flexDirection: 'column',
+  backgroundImage: `linear-gradient(to bottom right, ${gray.light}, ${gray.dark})`
 }

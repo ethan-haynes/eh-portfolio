@@ -21,14 +21,14 @@ const styles = {
     position: 'absolute',
     left: '-100vw',
     visibility: 'hidden',
-    margin: '0 30px'
+    margin: '0 100px'
   },
   on: {
     transitionDuration: '.5s',
     transitionTimingFunction: 'ease-in',
     position: 'absolute',
     left: 0,
-    margin: '0 30px'
+    margin: '0 100px'
   },
   boxOff: {
     // backgroundSize: '100% 200%',

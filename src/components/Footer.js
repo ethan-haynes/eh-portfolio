@@ -87,7 +87,7 @@ class Footer extends Component {
           left: 0,
           padding: 10
         }}>
-          <span style={{ color: gray.light, fontSize: 13 }}>&copy; 2018 ethanhaynes.herokuapp.com</span>
+          <span style={{ color: white, fontSize: 13 }}>&copy; 2018 ethanhaynes.herokuapp.com</span>
         </span>
         <span style={{
           position: 'absolute',
