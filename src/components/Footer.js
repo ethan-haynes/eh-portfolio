@@ -62,10 +62,14 @@ class Footer extends Component {
     const { page, pageDown, transition } = this.state
     const direction = pageDown ? 1 : - 1
     this.props.updatePage(page + direction)
+  }
+
+  componentWillReceiveProps (nextProps) {
+    const { page, pageDown, transition } = this.state
     this.setState({
-      page: page + direction,
+      page: nextProps.page,
       prevPage: page,
-      pageDown: this.isPageDown(page + direction),
+      pageDown: this.isPageDown(nextProps.page),
       transition: true
     },
       () => setTimeout(() =>

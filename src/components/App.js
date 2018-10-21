@@ -79,16 +79,19 @@ class App extends Component {
               justifyContent: 'flex-end',
               padding: '0 10px'
             }}>
-              <span style={{
-                width: (index === this.state.page) ? 35 : 25,
-                margin: 3,
-                backgroundColor: (index === this.state.page) ? highlight : white,
-                height: 2
-              }}/>
+              <span
+                style={{
+                  width: (index === this.state.page) ? 35 : 25,
+                  margin: 3,
+                  backgroundColor: (index === this.state.page) ? highlight : white,
+                  height: 2
+                }}
+                onClick={() => this.updatePage(index)}
+              />
             </div>
           )}
         </div>
-        <Footer updatePage={this.updatePage} />
+        <Footer updatePage={this.updatePage} page={this.state.page} />
       </div>
     )
   }
