@@ -4,11 +4,12 @@ import Radium from 'radium'
 class Container extends Component {
   render() {
     return (
-      <div style={{ flex: '1 0 auto', ...this.props.style }}>
-        <div>This is a page with stuff</div>
-        <div>This is a page with stuff</div>
-        <div>This is a page with stuff</div>
-        <div>This is a page with stuff</div>
+      <div style={{ ...this.props.style }}>
+        <div style={{ position: 'relative' }}>
+          <div style={{ fontSize: 30, top: '30vh', width: '80vw', position: 'absolute' }}>
+            This is a page with stuff
+          </div>
+        </div>
       </div>
     )
   }

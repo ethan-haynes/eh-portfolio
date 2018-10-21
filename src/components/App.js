@@ -71,34 +71,15 @@ class App extends Component {
           top: '50%',
           right: 0,
         }}>
-        <div style={{
-          display:'flex',
-          justifyContent: 'flex-end',
-          padding: '0 10px'
-        }}>
-          <span style={{ width: 35, margin: 3, backgroundColor: white, height: 2 }}/>
-        </div>
-        <div style={{
-          display:'flex',
-          justifyContent: 'flex-end',
-          padding: '0 10px',
-        }}>
-          <span style={{ width: 25, margin: 3, backgroundColor: white, height: 2 }}/>
-        </div>
-        <div style={{
-          display:'flex',
-          justifyContent: 'flex-end',
-          padding: '0 10px'
-        }}>
-          <span style={{ width: 25, margin: 3, backgroundColor: white, height: 2 }}/>
-        </div>
-        <div style={{
-          display:'flex',
-          justifyContent: 'flex-end',
-          padding: '0 10px'
-        }}>
-          <span style={{ width: 25, margin: 3, backgroundColor: white, height: 2 }}/>
-        </div>
+          {this.pages.map((Page, index) =>
+            <div style={{
+              display:'flex',
+              justifyContent: 'flex-end',
+              padding: '0 10px'
+            }}>
+              <span style={{ width: (index === this.state.page) ? 35 : 25, margin: 3, backgroundColor: white, height: 2 }}/>
+            </div>
+          )}
         </div>
         <Footer updatePage={this.updatePage} />
       </div>
