@@ -58,9 +58,10 @@ class Footer extends Component {
 
   direction = () => this.state.page - this.state.prevPage
 
-  toggle = () => {
+  onClick = () => {
     const { page, pageDown, transition } = this.state
     const direction = pageDown ? 1 : - 1
+    this.props.updatePage(page + direction)
     this.setState({
       page: page + direction,
       prevPage: page,
@@ -95,8 +96,8 @@ class Footer extends Component {
           padding: 10
         }}>
           <div style={{ border: `2px solid ${white}`, borderRadius: 25, height: 30, width: 'auto' }}>
-            <div onClick={this.toggle} style={{...transition, position: 'relative'}}>
-              <FontAwesomeIcon onClick={this.toggle} style={{ padding: '0 2px', ...direction }} icon={faChevronDown} />
+            <div onClick={this.onClick} style={{...transition, position: 'relative'}}>
+              <FontAwesomeIcon onClick={this.onClick} style={{ padding: '0 2px', ...direction }} icon={faChevronDown} />
             </div>
           </div>
         </span>

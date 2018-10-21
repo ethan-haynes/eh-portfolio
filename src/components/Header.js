@@ -21,6 +21,7 @@ class Header extends Component {
           <div style={{ width: 25, margin: 3, backgroundColor: white, height: 2 }}/>
           <div style={{ width: 25, margin: 3, backgroundColor: white, height: 2 }}/>
         </span>
+        <span>full stack developer</span>
       </header>
     )
   }
