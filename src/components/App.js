@@ -9,8 +9,10 @@ import { app as appStyle } from '../styles/app'
 import { white, gray, highlight } from '../shared/styles/colors'
 import Header from './Header'
 import Footer from './Footer'
-import Container from './Container'
-import Container2 from './Container2'
+import Home from './Pages/Home'
+import FrontEnd from './Pages/FrontEnd'
+import BackEnd from './Pages/BackEnd'
+import BuildAndDeploy from './Pages/BuildAndDeploy'
 
 const styles = {
   off: {
@@ -47,10 +49,10 @@ class App extends Component {
   updatePage = (page) => this.setState({ page })
 
   pages = [
-    Container,
-    Container2,
-    Container,
-    Container2,
+    Home,
+    FrontEnd,
+    BackEnd,
+    BuildAndDeploy,
   ]
 
   render() {

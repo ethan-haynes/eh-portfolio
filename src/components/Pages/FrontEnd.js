@@ -7,21 +7,22 @@ import faJsSquare from '@fortawesome/fontawesome-free-brands/faJsSquare'
 import faDocker from '@fortawesome/fontawesome-free-brands/faDocker'
 import Radium from 'radium'
 
-class Container extends Component {
+import { white, gray } from '../../shared/styles/colors'
+
+class FrontEnd extends Component {
   render() {
     return (
       <div style={{ ...this.props.style }}>
         <div style={{ position: 'relative' }}>
           <div style={{ fontSize: 25, top: '30vh', width: '80vw', position: 'absolute' }}>
             <div style={{ fontSize: 75 }}>
-              Hello
+              front-end
+              <FontAwesomeIcon style={{ fontSize: 35, margin: '0 4px' }} icon={faReact} />
+              <FontAwesomeIcon style={{ fontSize: 35, margin: '0 4px' }} icon={faJsSquare} />
             </div>
-            <FontAwesomeIcon style={{ padding: '0 2px' }} icon={faPython} />
-            <FontAwesomeIcon style={{ padding: '0 2px' }} icon={faReact} />
-            <FontAwesomeIcon style={{ padding: '0 2px' }} icon={faNodeJs} />
-            <FontAwesomeIcon style={{ padding: '0 2px' }} icon={faJsSquare} />
-            <FontAwesomeIcon style={{ padding: '0 2px' }} icon={faDocker} />
-            This is a page with stuff
+            <div>
+            words and stuff
+            </div>
           </div>
         </div>
       </div>
@@ -29,4 +30,4 @@ class Container extends Component {
   }
 }
 
-export default Radium(Container)
+export default Radium(FrontEnd)
