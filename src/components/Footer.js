@@ -13,17 +13,24 @@ var transitionDownKeyframes = Radium.keyframes({
     '100%': { padding: 0 },
 })
 
+var transitionUpKeyframes = Radium.keyframes({
+    '0%': { padding: 0 },
+    '75%': { padding: '0 15px', marginTop: '-12px' },
+    '100%': { padding: 0 },
+})
+
 var styles = {
-  off: {
-    color: '#FF5722',
+  down: {
     transitionDuration: '.2s',
-    transitionTimingFunction: 'ease-out',
+    transitionDelay: '1s',
+    transitionTimingFunction: 'ease-in',
   },
-  on: {
-    color: '#4CAF50',
+  up: {
     transitionDuration: '.2s',
-    height: 100,
-    transitionTimingFunction: 'ease-out',
+    transitionDelay: '1s',
+    height: 40,
+    transform: 'rotate(180deg)',
+    transitionTimingFunction: 'ease-in',
   },
   pageTransitionDown: {
       animationDuration: '1s',
@@ -31,35 +38,46 @@ var styles = {
   },
   pageTransitionUp: {
       animationDuration: '1s',
-      animationName: transitionDownKeyframes
+      animationName: transitionUpKeyframes
   }
 }
 
 class Footer extends Component {
-  state = { pageDown: true, transition: false, page: 0, pages: [0,1,2,3] }
+  state = { pageDown: true, transition: false, page: 0, prevPage: 0, pages: [0,1,2,3] }
 
-  isPageDown = ({ page, pageDown } = this.state) => {
+  isPageDown = (page) => {
     switch (page) {
       case 0:
         return true
       case 3:
-        return true
+        return false
       default:
-        return pageDown
+        return this.state.pageDown
     }
   }
 
+  direction = () => this.state.page - this.state.prevPage
+
   toggle = () => {
     const { page, pageDown, transition } = this.state
-    this.setState({ page: pageDown ? (page + 1) : (page - 1), pageDown: this.isPageDown(), transition: true },
-      () => setTimeout(()=>this.setState({ transition: false }), 1000)
+    const direction = pageDown ? 1 : - 1
+    this.setState({
+      page: page + direction,
+      prevPage: page,
+      pageDown: this.isPageDown(page + direction),
+      transition: true
+    },
+      () => setTimeout(() =>
+        this.setState({ transition: false }), 1000
+      )
     )
   }
+
   render() {
     var transition = this.state.transition
-      ? this.state.pageDown ? styles.pageTransitionDown : styles.pageTransitionUp
+      ? -1 < this.direction() ? styles.pageTransitionDown : styles.pageTransitionUp
       : {} // clear animation
-
+    var direction = this.state.pageDown ? styles.down : styles.up
     return (
       <footer>
         <span style={{
@@ -77,8 +95,8 @@ class Footer extends Component {
           padding: 10
         }}>
           <div style={{ border: `2px solid ${white}`, borderRadius: 25, height: 30, width: 'auto' }}>
-            <div onClick={this.toggle} style={transition}>
-              <FontAwesomeIcon onClick={this.toggle} style={{ padding: '0 2px' }} icon={faChevronDown} />
+            <div onClick={this.toggle} style={{...transition, position: 'relative'}}>
+              <FontAwesomeIcon onClick={this.toggle} style={{ padding: '0 2px', ...direction }} icon={faChevronDown} />
             </div>
           </div>
         </span>
