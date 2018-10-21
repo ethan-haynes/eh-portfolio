@@ -1,4 +1,10 @@
 import React, { Component } from 'react'
+import FontAwesomeIcon from '@fortawesome/react-fontawesome'
+import faPython from '@fortawesome/fontawesome-free-brands/faPython'
+import faReact from '@fortawesome/fontawesome-free-brands/faReact'
+import faNodeJs from '@fortawesome/fontawesome-free-brands/faNodeJs'
+import faJsSquare from '@fortawesome/fontawesome-free-brands/faJsSquare'
+import faDocker from '@fortawesome/fontawesome-free-brands/faDocker'
 import Radium from 'radium'
 
 class Container extends Component {
@@ -6,7 +12,15 @@ class Container extends Component {
     return (
       <div style={{ ...this.props.style }}>
         <div style={{ position: 'relative' }}>
-          <div style={{ fontSize: 30, top: '30vh', width: '80vw', position: 'absolute' }}>
+          <div style={{ fontSize: 25, top: '30vh', width: '80vw', position: 'absolute' }}>
+            <div style={{ fontSize: 75 }}>
+              Hello
+            </div>
+            <FontAwesomeIcon style={{ padding: '0 2px' }} icon={faPython} />
+            <FontAwesomeIcon style={{ padding: '0 2px' }} icon={faReact} />
+            <FontAwesomeIcon style={{ padding: '0 2px' }} icon={faNodeJs} />
+            <FontAwesomeIcon style={{ padding: '0 2px' }} icon={faJsSquare} />
+            <FontAwesomeIcon style={{ padding: '0 2px' }} icon={faDocker} />
             This is a page with stuff
           </div>
         </div>

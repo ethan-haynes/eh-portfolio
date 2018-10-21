@@ -6,7 +6,7 @@ import faGithub from '@fortawesome/fontawesome-free-brands/faGithub'
 import faLinkedin from '@fortawesome/fontawesome-free-brands/faLinkedin'
 import Radium from 'radium'
 import { app as appStyle } from '../styles/app'
-import { white, gray } from '../shared/styles/colors'
+import { white, gray, highlight } from '../shared/styles/colors'
 import Header from './Header'
 import Footer from './Footer'
 import Container from './Container'
@@ -77,7 +77,12 @@ class App extends Component {
               justifyContent: 'flex-end',
               padding: '0 10px'
             }}>
-              <span style={{ width: (index === this.state.page) ? 35 : 25, margin: 3, backgroundColor: white, height: 2 }}/>
+              <span style={{
+                width: (index === this.state.page) ? 35 : 25,
+                margin: 3,
+                backgroundColor: (index === this.state.page) ? highlight : white,
+                height: 2
+              }}/>
             </div>
           )}
         </div>
