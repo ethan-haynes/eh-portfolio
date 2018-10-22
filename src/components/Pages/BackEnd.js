@@ -6,6 +6,7 @@ import faNodeJs from '@fortawesome/fontawesome-free-brands/faNodeJs'
 import faJsSquare from '@fortawesome/fontawesome-free-brands/faJsSquare'
 import faDocker from '@fortawesome/fontawesome-free-brands/faDocker'
 import Radium from 'radium'
+import { white, gray } from '../../shared/styles/colors'
 
 class BackEnd extends Component {
   render() {
@@ -16,14 +17,13 @@ class BackEnd extends Component {
             <div style={{ fontSize: 75 }}>
               back-end
             </div>
-            <div>
-              <FontAwesomeIcon style={{ padding: '0 2px' }} icon={faPython} />
-              faPython
+            <div style={{display : 'flex'}}>
+              <div style={{ height: 1, width: '5vw', background: white, margin: '15px 0' }}/>
+              <FontAwesomeIcon style={{ fontSize: 25, margin: '0 7px' }} icon={faPython} />
+              <div style={{ height: 1, width: '5vw', background: white, margin: '15px 0' }}/>
+              <FontAwesomeIcon style={{ fontSize: 25, margin: '0 7px' }} icon={faNodeJs} />
+              <div style={{ height: 1, width: '40vw', background: white, margin: '15px 0' }}/>
             </div>
-            <dif>
-              <FontAwesomeIcon style={{ padding: '0 2px' }} icon={faNodeJs} />
-              faNodeJs
-            </dif>
           </div>
         </div>
       </div>
