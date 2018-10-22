@@ -13,7 +13,7 @@ class FrontEnd extends Component {
     return (
       <div style={{ ...this.props.style }}>
         <div style={{ position: 'relative' }}>
-          <div style={{ fontSize: 25, top: '30vh', width: '80vw', position: 'absolute' }}>
+          <div style={{ fontSize: 15, top: '30vh', width: '80vw', position: 'absolute' }}>
             <div style={{ fontSize: 75 }}>
               front-end
             </div>
@@ -23,6 +23,17 @@ class FrontEnd extends Component {
               <div style={{ height: 1, width: '5vw', background: white, margin: '15px 0' }}/>
               <FontAwesomeIcon style={{ fontSize: 25, margin: '0 7px' }} icon={faJsSquare} />
               <div style={{ height: 1, width: '40vw', background: white, margin: '15px 0' }}/>
+            </div>
+            <div style={{ width: '50%', display: 'flex' }}>
+              <div>
+                <div style={{ borderLeft: '2px solid rgb(247, 241, 236, .5)', padding: 10 }}> HTML/CSS </div>
+                <div style={{ borderLeft: '2px solid rgb(247, 241, 236, .5)', padding: 10 }}> JavaScript & Frameworks </div>
+                <div style={{ borderLeft: `2px solid ${white}`, padding: 10 }}> Testing</div>
+                <div style={{ borderLeft: '2px solid rgb(247, 241, 236, .5)', padding: 10 }}> Build and Configuration </div>
+              </div>
+              <div>
+                details here
+              </div>
             </div>
           </div>
         </div>

@@ -22,7 +22,17 @@ class BuildAndDeploy extends Component {
               <FontAwesomeIcon style={{ fontSize: 25, margin: '0 7px' }} icon={faDocker} />
               <div style={{ height: 1, width: '40vw', background: white, margin: '15px 0' }}/>
             </div>
-            <div style={{ width: '50%' }}> in DevOps, Automation, Build Engineering, Configuration Management, and Front-End and Back-End Software Development</div>
+            <div style={{ width: '50%', display: 'flex' }}>
+              <div>
+                <div style={{ borderLeft: '2px solid rgb(247, 241, 236, .5)', padding: 10 }}> DevOps </div>
+                <div style={{ borderLeft: '2px solid rgb(247, 241, 236, .5)', padding: 10 }}> Automation </div>
+                <div style={{ borderLeft: `2px solid ${white}`, padding: 10 }}> Build Engineering</div>
+                <div style={{ borderLeft: '2px solid rgb(247, 241, 236, .5)', padding: 10 }}> Configuration Management </div>
+              </div>
+              <div>
+                details here
+              </div>
+            </div>
           </div>
         </div>
       </div>
