@@ -55,7 +55,7 @@ class FrontEnd extends Component {
                   </div>
                 )}
               </div>
-              <div style={{ marginLeft: 70 }}>
+              <div>
                 {this.details[this.state.selected]}
               </div>
             </div>
